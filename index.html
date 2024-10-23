@@ -20,18 +20,23 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            padding: 20px;
         }
 
         .container {
             background-color: rgba(0, 0, 0, 0.2);
-            padding: 40px;
+            padding: 5vw;
             border-radius: 10px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 500px;
+            transition: all 0.3s ease;
         }
 
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
+            transition: font-size 0.3s;
         }
 
         p {
@@ -52,6 +57,64 @@
 
         button:hover {
             background-color: #ff4d4d;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 7vw;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            button {
+                padding: 12px 24px;
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10vw;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            button {
+                padding: 15px 30px;
+                font-size: 1.2em;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 800px;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.4em;
+            }
+
+            button {
+                padding: 14px 28px;
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
