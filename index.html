@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elastic Beanstalk Demo with JavaScript</title>
+    <title>Elastic Beanstalk Case Study - Updated</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #4f73b6, #29a4dd);
+            background: linear-gradient(120deg, #ff5e57, #ffd166); /* Updated background colors */
             color: white;
             min-height: 100vh;
             display: flex;
@@ -24,7 +24,7 @@
         }
 
         .container {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.5); /* Slightly darker background for the container */
             padding: 5vw;
             border-radius: 10px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
@@ -47,7 +47,7 @@
         button {
             padding: 10px 20px;
             font-size: 1em;
-            background-color: #ff6b6b;
+            background-color: #028090; /* Updated button color */
             border: none;
             border-radius: 5px;
             color: white;
@@ -56,7 +56,7 @@
         }
 
         button:hover {
-            background-color: #ff4d4d;
+            background-color: #00a896; /* Updated hover color */
         }
 
         /* Media queries for base responsiveness */
@@ -102,8 +102,8 @@
 <body>
     <div class="container">
         <h1>Welcome to Elastic Beanstalk!</h1>
-        <p>This is a demo page to test deployment on AWS Elastic Beanstalk.</p>
-        <button id="resizeButton">Resize Window</button>
+        <p>This is an updated demo page to test deployment with changes on AWS Elastic Beanstalk.</p>
+        <button id="resizeButton">Click Me</button>
     </div>
 
     <script>
@@ -117,18 +117,18 @@
             if (windowWidth < 480) {
                 // Small mobile screen changes
                 heading.style.fontSize = '1.5em';
-                container.style.backgroundColor = 'rgba(255, 165, 0, 0.2)'; // Orange background for small screens
-                button.style.backgroundColor = '#00bfa5'; // Teal button for small screens
+                container.style.backgroundColor = 'rgba(255, 0, 0, 0.2)'; // Red background for small screens
+                button.style.backgroundColor = '#ff1654'; // Dark red button for small screens
             } else if (windowWidth < 768) {
                 // Tablet size changes
                 heading.style.fontSize = '2em';
-                container.style.backgroundColor = 'rgba(75, 192, 192, 0.2)'; // Light blue background
-                button.style.backgroundColor = '#ff6b6b'; // Return to original button color
+                container.style.backgroundColor = 'rgba(0, 255, 127, 0.2)'; // Light green background
+                button.style.backgroundColor = '#028090'; // Return to original button color
             } else {
                 // Desktop or large screen changes
                 heading.style.fontSize = '2.5em';
-                container.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'; // Original background color
-                button.style.backgroundColor = '#ff6b6b'; // Original button color
+                container.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Original background color
+                button.style.backgroundColor = '#028090'; // Original button color
             }
         }
 
