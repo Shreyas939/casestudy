@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elastic Beanstalk Demo</title>
+    <title>Elastic Beanstalk Demo with JavaScript</title>
     <style>
         * {
             margin: 0;
@@ -59,7 +59,7 @@
             background-color: #ff4d4d;
         }
 
-        /* Media queries for responsiveness */
+        /* Media queries for base responsiveness */
         @media (max-width: 768px) {
             .container {
                 padding: 7vw;
@@ -97,32 +97,51 @@
                 font-size: 1.2em;
             }
         }
-
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 800px;
-            }
-
-            h1 {
-                font-size: 3em;
-            }
-
-            p {
-                font-size: 1.4em;
-            }
-
-            button {
-                padding: 14px 28px;
-                font-size: 1.2em;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Elastic Beanstalk!</h1>
         <p>This is a demo page to test deployment on AWS Elastic Beanstalk.</p>
-        <button>Click Me</button>
+        <button id="resizeButton">Resize Window</button>
     </div>
+
+    <script>
+        // Function to dynamically adjust content based on window width
+        function adjustResponsiveStyles() {
+            const container = document.querySelector('.container');
+            const heading = document.querySelector('h1');
+            const button = document.querySelector('button');
+            const windowWidth = window.innerWidth;
+
+            if (windowWidth < 480) {
+                // Small mobile screen changes
+                heading.style.fontSize = '1.5em';
+                container.style.backgroundColor = 'rgba(255, 165, 0, 0.2)'; // Orange background for small screens
+                button.style.backgroundColor = '#00bfa5'; // Teal button for small screens
+            } else if (windowWidth < 768) {
+                // Tablet size changes
+                heading.style.fontSize = '2em';
+                container.style.backgroundColor = 'rgba(75, 192, 192, 0.2)'; // Light blue background
+                button.style.backgroundColor = '#ff6b6b'; // Return to original button color
+            } else {
+                // Desktop or large screen changes
+                heading.style.fontSize = '2.5em';
+                container.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'; // Original background color
+                button.style.backgroundColor = '#ff6b6b'; // Original button color
+            }
+        }
+
+        // Add event listener for window resize
+        window.addEventListener('resize', adjustResponsiveStyles);
+
+        // Initial call to adjust the styles when the page loads
+        adjustResponsiveStyles();
+
+        // Optional: Button to trigger manual resize message
+        document.getElementById('resizeButton').addEventListener('click', function() {
+            alert('Try resizing the window to see the dynamic changes!');
+        });
+    </script>
 </body>
 </html>
