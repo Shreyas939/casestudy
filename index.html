@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elastic Beanstalk Case Study - Updated</title>
+    <title>Elastic Beanstalk Case Study - Updated Colors</title>
     <style>
         * {
             margin: 0;
@@ -13,8 +13,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #4b79a1, #283e51); /* Updated background colors */
-            color: white;
+            background: linear-gradient(120deg, #a1c4fd, #c2e9fb); /* Updated background colors */
+            color: black;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -24,10 +24,10 @@
         }
 
         .container {
-            background-color: rgba(0, 0, 0, 0.5); /* Slightly darker background for the container */
+            background-color: rgba(240, 248, 255, 0.8); /* Light blueish-gray background */
             padding: 5vw;
             border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 500px;
             transition: all 0.3s ease;
@@ -47,16 +47,16 @@
         button {
             padding: 10px 20px;
             font-size: 1em;
-            background-color: #028090; /* Updated button color */
+            background-color: #ffcc00; /* Updated button color to yellow */
             border: none;
             border-radius: 5px;
-            color: white;
+            color: black;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #00a896; /* Updated hover color */
+            background-color: #ff9900; /* Updated hover color to dark yellow */
         }
 
         /* Media queries for base responsiveness */
@@ -123,12 +123,12 @@
                 // Tablet size changes
                 heading.style.fontSize = '2em';
                 container.style.backgroundColor = 'rgba(0, 255, 127, 0.2)'; // Light green background
-                button.style.backgroundColor = '#028090'; // Return to original button color
+                button.style.backgroundColor = '#ffcc00'; // Return to updated button color
             } else {
                 // Desktop or large screen changes
                 heading.style.fontSize = '2.5em';
-                container.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Original background color
-                button.style.backgroundColor = '#028090'; // Original button color
+                container.style.backgroundColor = 'rgba(240, 248, 255, 0.8)'; // Updated light background color
+                button.style.backgroundColor = '#ffcc00'; // Updated button color
             }
         }
 
